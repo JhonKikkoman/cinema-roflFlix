@@ -38,19 +38,19 @@ export default function Movies() {
     {
       title: 'Фильмы',
       url: '/films',
-      data: serializeDataForCarousel(films.data.items),
+      data: serializeDataForCarousel(films.data ? films.data.items : []),
       autoPlayTime: 5000,
     },
     {
       title: 'Сериалы',
       url: '/serials',
-      data: serializeDataForCarousel(serials.data.items),
+      data: serializeDataForCarousel(serials.data ? serials.data.items : []),
       autoPlayTime: 3000,
     },
     {
       title: 'Мультфильмы',
       url: '/cartoons',
-      data: serializeDataForCarousel(cartoons.data.items),
+      data: serializeDataForCarousel(cartoons.data ? cartoons.data.items : []),
       autoPlayTime: 6000,
     },
   ];

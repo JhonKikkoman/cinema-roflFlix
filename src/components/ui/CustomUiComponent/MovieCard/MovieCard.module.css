@@ -1,0 +1,31 @@
+.img {
+  width: 215px;
+  height: 320px;
+  transition: transform 0.5s;
+}
+
+.img:hover {
+  transform: scale(1.05);
+}
+
+.effect {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.effect:before {
+  content: '';
+  position: absolute;
+  transition: transform 0.3s ease;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #1976d2;
+  transform: translateX(-100%);
+}
+
+.effect:hover:before {
+  transform: translateX(0);
+}
